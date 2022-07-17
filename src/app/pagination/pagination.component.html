@@ -1,0 +1,13 @@
+<div>
+  <ul class="pagination">
+    <li class="page-item" (click)="leftArrow()">
+      <p class="page-link">&laquo;</p>
+    </li>
+    <li class="page-item" *ngFor="let value of pagesValues">
+      <p class="page-link" (click)="getPage(value)">{{value}}</p>
+    </li>
+    <li class="page-item" (click)="rightArrow()">
+      <p class="page-link">&raquo;</p>
+    </li>
+  </ul>
+</div>

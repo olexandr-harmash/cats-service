@@ -1,0 +1,19 @@
+<div class="seach-group">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-lg-8">
+      <label for="breed">Breed: </label>
+      <input id="breed" type="text" [formControl]="breed">
+    </div>
+    <div class="col-xs-12 col-sm-12 col-lg-4">
+      <label for="count">Count: </label>
+      <input id="count" type="text" [formControl]="count">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-lg-8">
+      Choose to find:
+      <span class="badge rounded-pill bg-success" (click)="getBreeds('')">All</span>
+      <span class="badge rounded-pill bg-success" *ngFor="let breed of find" (click)="getBreeds(breed.name)">{{breed.name}}</span>
+    </div>
+  </div>
+</div>
